@@ -15,7 +15,7 @@ let body = document.querySelector("body");
 let header = document.querySelector("header")
 let headerB = document.getElementsByClassName("gTitle");
 let clock;
-let gameStarted = false;
+let gameStarted = true;
 let ms = 1000;
 let gOver = document.getElementById("gOver");
 resetB.addEventListener("click", reset);
@@ -28,7 +28,6 @@ randomColorHeader();
 let timerColorHeader = setInterval(randomColorHeader, 500);
 let boraVer = "quero ver";
 document.getElementsByTagName("body")[0].style.backgroundColor = "#000";
-
 
 function randomColorHeader(){
     for(let i = 0; i < headerB.length; i++){
