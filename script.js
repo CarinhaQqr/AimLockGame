@@ -18,6 +18,8 @@ let clock;
 let gameStarted = false;
 let ms = 1000;
 let gOver = document.getElementById("gOver");
+let changeBgButton = document.getElementsByClassName("change-bg")[0];
+changeBgButton.addEventListener("click", changeBg);
 resetB.addEventListener("click", reset);
 startB.addEventListener("click", start);
 ball.addEventListener("click", hit);
@@ -26,7 +28,23 @@ clock = setInterval(randomPosition, ms);
 var randomColor;
 randomColorHeader();
 let timerColorHeader = setInterval(randomColorHeader, 500);
-document.getElementsByTagName("body")[0].style.backgroundColor = "#000";
+let bG = true;
+
+function changeBg(){
+    if(bG){
+        body.style.backgroundColor = "#000";
+        changeBgButton.style.backgroundColor = "rgba(255,255,255,.2)";
+        changeBgButton.innerHTML = "Change to Light Mode";
+        scoreI.style.color = "rgba(255, 255, 255, 0.1)";
+        bG = false;
+    } else{
+        body.style.backgroundColor = "#fff";
+        changeBgButton.style.backgroundColor = "rgba(0,0,0,.2)";
+        scoreI.style.color = "rgb(0, 0, 0)";
+        changeBgButton.innerHTML = "Change to Dark Mode";
+        bG = true;
+    }
+}
 
 function randomColorHeader(){
     for(let i = 0; i < headerB.length; i++){
@@ -44,6 +62,7 @@ function reset(){
     dHScore.style.display = "none";
     header.style.display = "block";
     gameStarted = false;
+    changeBgButton.style.display = "block";
 }
 
 function start(){
@@ -65,6 +84,7 @@ function start(){
     ball.style.width = ballSize + "px";
     clearInterval(clock);
     clock = setInterval(randomPosition, ms);
+    changeBgButton.style.display = "none";
 }
 
 function randomPosition(){
