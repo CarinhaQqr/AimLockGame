@@ -26,6 +26,7 @@ clock = setInterval(randomPosition, ms);
 var randomColor;
 randomColorHeader();
 let timerColorHeader = setInterval(randomColorHeader, 500);
+let boraVer = 12356;
 
 
 function randomColorHeader(){
