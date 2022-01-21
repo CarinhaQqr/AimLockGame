@@ -26,6 +26,8 @@ clock = setInterval(randomPosition, ms);
 var randomColor;
 randomColorHeader();
 let timerColorHeader = setInterval(randomColorHeader, 500);
+let boraVer = "quero ver";
+document.getElementsByTagName("body")[0].style.backgroundColor = "#000";
 
 
 function randomColorHeader(){
