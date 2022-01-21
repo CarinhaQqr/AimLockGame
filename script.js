@@ -18,7 +18,7 @@ let clock;
 let gameStarted = false;
 let ms = 1000;
 let gOver = document.getElementById("gOver");
-resetB.addEventListener("click", start);
+resetB.addEventListener("click", reset);
 startB.addEventListener("click", start);
 ball.addEventListener("click", hit);
 body.addEventListener("click", miss);
@@ -33,6 +33,17 @@ function randomColorHeader(){
         randomColor = Math.floor(Math.random()*16777215).toString(16);
         headerB[i].style.color = "#" + randomColor;
     }
+}
+
+function reset(){
+    ball.style.display = "none";
+    scoreI.style.display = "none";
+    startB.style.display = "block";
+    gOver.style.display = "none";
+    resetB.style.display = "none";
+    dHScore.style.display = "none";
+    header.style.display = "block";
+    gameStarted = false;
 }
 
 function start(){
