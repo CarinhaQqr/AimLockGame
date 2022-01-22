@@ -22,7 +22,7 @@ header button{
     transition: color 500ms;
 }
 header button:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
@@ -39,9 +39,9 @@ body{
 
 .change-bg{
     position: absolute;
-    left: 10px;
-    top: 10px;
-    padding: 2rem 4rem;
+    right: 30px;
+    top: 30px;
+    padding: 2rem 2rem;
     font-size: 1.6rem;
     border-radius: 2rem;
     transition: background-color .5s;
@@ -49,11 +49,17 @@ body{
     font-weight: bold;
 }
 
+
+.change-bg-img{
+width: 5rem;
+}
+
+
 .score{
     font-size: 80vh;
     font-family: sans-serif;
-    color: rgb(0, 0, 0);
     user-select: none;
+    color: rgb(210, 210, 210);
     display: none;
 }
 

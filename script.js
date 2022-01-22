@@ -19,6 +19,8 @@ let gameStarted = false;
 let ms = 1000;
 let gOver = document.getElementById("gOver");
 let changeBgButton = document.getElementsByClassName("change-bg")[0];
+let BgImage = document.getElementsByClassName("img");[0];
+
 changeBgButton.addEventListener("click", changeBg);
 resetB.addEventListener("click", reset);
 startB.addEventListener("click", start);
@@ -34,14 +36,14 @@ function changeBg(){
     if(bG){
         body.style.backgroundColor = "#000";
         changeBgButton.style.backgroundColor = "rgba(255,255,255,.2)";
-        changeBgButton.innerHTML = "Change to Light Mode";
-        scoreI.style.color = "rgba(255, 255, 255, 0.1)";
+        document.getElementById("img").src="https://cdn.iconscout.com/icon/free/png-256/sun-3315768-2757568.png";
+        scoreI.style.color = "rgb(50, 50, 50)"
         bG = false;
     } else{
         body.style.backgroundColor = "#fff";
         changeBgButton.style.backgroundColor = "rgba(0,0,0,.2)";
-        scoreI.style.color = "rgb(0, 0, 0)";
-        changeBgButton.innerHTML = "Change to Dark Mode";
+        scoreI.style.color = "rgb(210, 210, 210)";
+        document.getElementById("img").src="https://cdn.iconscout.com/icon/free/png-256/night-mode-3-475104.png";
         bG = true;
     }
 }
