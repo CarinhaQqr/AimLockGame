@@ -39,6 +39,10 @@ randomColorHeader();
 let timerColorHeader = setInterval(randomColorHeader, 500);
 let bG = true;
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    changeBg(true);
+}
+
 function changeBg(){
     if(bG){
         body.style.backgroundColor = "#000";
