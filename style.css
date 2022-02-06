@@ -92,9 +92,8 @@ width: 5rem;
     cursor: pointer;
 }
 .dHScore{
-    position: absolute;
-    top: 45vh;
     display: none;
+    order: 2;
 }
 
 .dHScore p{
@@ -109,18 +108,15 @@ width: 5rem;
 
 
 #gOver{
-    position: absolute;
     color: red;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 5rem;
-    top: 35vh;
     user-select: none;
     display: none;
+    order: 1;
 }
 .reset{
-    position: absolute;
-    top: 55vh;
     font-size: 50px;
     padding: 20px;
     color: darkblue;
@@ -128,8 +124,30 @@ width: 5rem;
     border-radius: 20px;
     user-select: none;
     display: none;
+    order: 3;
 }
 .reset:hover{
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.reset-score{
+    font-size: 50px;
+    padding: 20px;
+    color: darkred;
+    background-color: rgb(255, 0, 43);
+    border-radius: 20px;
+    user-select: none;
+    display: none;
+    order: 4;
+}
+.reset-score:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
 }
