@@ -1,2 +1,2 @@
 :D
-sync
+sync 2
